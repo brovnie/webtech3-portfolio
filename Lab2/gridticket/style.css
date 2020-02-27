@@ -39,6 +39,10 @@ html, body{
     font-weight: lighter;
     padding-top: 0.7em; 
 }
+img{
+    height: 215px;
+    width: 215px;
+}
 .codebar{
     align-self: center;
 }

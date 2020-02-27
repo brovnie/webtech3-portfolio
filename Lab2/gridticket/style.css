@@ -1,0 +1,23 @@
+html, body{
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    background-image: url(/Lab2/gridticket/images/background-image.png);
+    background-size: cover;
+    background-position-y: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 574px;
+    margin: 0 auto;
+}
+.event-name{
+    color: white;
+    background-color: black;
+}
+.event-name h1{
+    letter-spacing: 0.2em;
+}

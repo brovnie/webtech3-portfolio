@@ -7,10 +7,24 @@ html, body{
     padding:0;
     text-align: center;
 }
+.red {
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue {
+    background-color: cyan;
+}
+@media (min-width: 5em){
+    body{
+        background-color: blue;
+    }
+} 
 @media (min-width: 65em){
-
+body{background-color: white;}
 div.container{
-    margin: 2% 10%;
+    margin: 2% 1%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 0.2em;
@@ -20,11 +34,8 @@ p{
     padding: 1.2em;
     margin:0;
 }
-.red {
-    background-color: red;
-}
+
 .yellow{
-    background-color: yellow;
     grid-row: 2 / 4;
     grid-column: 4 / span 2;
     display: grid;
@@ -32,11 +43,10 @@ p{
     align-items: center;
 }
 .blue{
-    background-color: cyan;
     grid-row: 1 / span 3;
     grid-column: 3 ;
     display: grid;
     justify-content: center;
     align-items: center;
 }
-} 
+}

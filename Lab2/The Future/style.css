@@ -1,3 +1,30 @@
-body{
+html, body{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    margin: 0;
+    padding:0;
+}
+.containter{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.99% 33.99% 33.99%;
+
+}
+div{
+    margin:0;
+}
+p{
+    padding:1em;
+    margin:0;
+}
+.red {
     background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue{
+    background-color: cyan;
 }

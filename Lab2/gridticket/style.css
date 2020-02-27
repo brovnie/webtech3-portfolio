@@ -14,7 +14,7 @@ html, body{
     height: 574px;
     margin: 10px auto;
     display: grid;
-    grid-template-rows: 2fr 5fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
    
 }
 .event-name h1, .event-name p{
@@ -37,13 +37,33 @@ html, body{
     letter-spacing: 0.4em;
     font-size: 0.7em;
     font-weight: lighter;
-    padding-top: 0.4em; 
+    padding-top: 0.7em; 
 }
 .codebar{
-    
+    align-self: center;
+}
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    font-weight: bold;
+    font-size: 1.05em;
 }
 .rect{
- 
+
+ border: 1px solid black;
+ letter-spacing: 0.2em;
+ padding:0;
+ margin:0;
+}
+.rect p{
+    margin: 0.7em;
+}
+.price{
+    grid-column: 1 / spam 2;
+}
+.rect.price span {
+    font-weight: normal;
 }
 .footer {
     display: none;

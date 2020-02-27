@@ -5,18 +5,19 @@ html, body{
     font-size: 1.4em;
     margin: 0;
     padding:0;
+    text-align: center;
 }
-.containter{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 33.99% 33.99% 33.99%;
+@media (min-width: 65em){
 
-}
-div{
-    margin:0;
+div.container{
+    margin: 2% 10%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.2em;
+    grid-template-rows: repeat(3, 1fr);
 }
 p{
-    padding:1em;
+    padding: 1.2em;
     margin:0;
 }
 .red {
@@ -24,7 +25,18 @@ p{
 }
 .yellow{
     background-color: yellow;
+    grid-row: 2 / 4;
+    grid-column: 4 / span 2;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 .blue{
     background-color: cyan;
+    grid-row: 1 / span 3;
+    grid-column: 3 ;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
+} 

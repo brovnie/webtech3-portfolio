@@ -7,6 +7,13 @@ html, body{
     padding:0;
     text-align: center;
 }
+div.container{
+    display: grid;
+}
+p{
+
+    margin:0;
+}
 .red {
     background-color: red;
 }
@@ -16,23 +23,30 @@ html, body{
 .blue {
     background-color: cyan;
 }
-@media (min-width: 5em){
-    body{
-        background-color: blue;
+
+@media(min-width: 35em){
+    div{
+        margin: 1.5%;
     }
-} 
+    .div.container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .yellow{
+        grid-row: 3 / 3;
+    grid-column: 2 /   2;
+    }
+    p{
+        padding: 2em;
+    }
+
+}
 @media (min-width: 65em){
-body{background-color: white;}
 div.container{
     margin: 2% 1%;
-    display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 0.2em;
     grid-template-rows: repeat(3, 1fr);
-}
-p{
-    padding: 1.2em;
-    margin:0;
 }
 
 .yellow{
@@ -48,5 +62,8 @@ p{
     display: grid;
     justify-content: center;
     align-items: center;
+}
+p{
+    padding: 1.2em;
 }
 }

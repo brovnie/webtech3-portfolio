@@ -12,12 +12,39 @@ html, body{
     background-repeat: no-repeat;
     width: 300px;
     height: 574px;
-    margin: 0 auto;
+    margin: 10px auto;
+    display: grid;
+    grid-template-rows: 2fr 5fr 1fr;
+   
+}
+.event-name h1, .event-name p{
+    margin:0; 
+    padding:0;
 }
 .event-name{
     color: white;
     background-color: black;
+    height: 94px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 .event-name h1{
     letter-spacing: 0.2em;
+    grid-row: 1 / 1;
+    padding-top: 0.5em;
+}
+.event-name p {
+    letter-spacing: 0.4em;
+    font-size: 0.7em;
+    font-weight: lighter;
+    padding-top: 0.4em; 
+}
+.codebar{
+    
+}
+.rect{
+ 
+}
+.footer {
+    display: none;
 }

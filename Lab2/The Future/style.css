@@ -9,10 +9,21 @@ html, body{
 }
 div.container{
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    
+}
+div {
+    margin: 1%;
 }
 p{
-
+    padding: 0.75em;
     margin:0;
+}
+.red, .yellow, .blue{
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 .red {
     background-color: red;
@@ -39,7 +50,6 @@ p{
     p{
         padding: 2em;
     }
-
 }
 @media (min-width: 65em){
 div.container{
@@ -52,16 +62,10 @@ div.container{
 .yellow{
     grid-row: 2 / 4;
     grid-column: 4 / span 2;
-    display: grid;
-    justify-content: center;
-    align-items: center;
 }
 .blue{
     grid-row: 1 / span 3;
     grid-column: 3 ;
-    display: grid;
-    justify-content: center;
-    align-items: center;
 }
 p{
     padding: 1.2em;

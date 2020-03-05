@@ -16,9 +16,9 @@ class Note {
     newA.setAttribute("class", "card-remove");
     newA.innerHTML = "Remove";
 
-    newNote.appendChild(newA); // added a element to div
+    
     newNote.appendChild(newP);  // p placed in dev
-
+    newNote.appendChild(newA); // added a element to div
     // HINT🤩 a.addEventListener('click', this.remove.bind(newNote));
     
     return newNote;

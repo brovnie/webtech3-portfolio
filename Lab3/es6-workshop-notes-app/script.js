@@ -44,6 +44,7 @@ class Note {
     // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
     // in this function, 'this' will refer to the current note element
     console.log("remove executed");
+    document.querySelector(".notes").remove(this.element);
   } 
 }
 

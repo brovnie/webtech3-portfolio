@@ -16,7 +16,7 @@ class Note {
     newA.setAttribute("class", "card-remove");
     newA.setAttribute("href", "#");
     newA.innerHTML = "Remove";
-
+    // try
     
     newNote.appendChild(newP);  // p placed in dev
     newNote.appendChild(newA); // added a element to div
@@ -38,15 +38,14 @@ class Note {
     // localStorage only supports strings, not arrays
     // if you want to store arrays, look at JSON.parse and JSON.stringify
     //document.querySelector(".notes").removeChild(this.element);
+    //JSON.stringify creates json file
+    let object = this;
+    console.log(this.title);
   }
   
   remove(){
     // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
     // in this function, 'this' will refer to the current note element
-
-    
-    console.log(this); // checking this
-    console.log(this.parentNode); // checking this.parentNod
     this.remove(this.parentNode);
   } 
 }
@@ -74,16 +73,16 @@ class App {
     
     // HINT🤩
     let text = document.querySelector("#txtAddNote").value;
-    console.log(text);
+    //console.log(text);
     let note = new Note(text); // created note
     note.add(); 
-    // note.add();
-    // note.saveToStorage();
+    note.saveToStorage();
     // this.reset();
   }
   
   reset(){
-    // this function should reset the form 
+    // this function should reset the form
+
   }
   
 }

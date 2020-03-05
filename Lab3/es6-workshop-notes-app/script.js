@@ -12,10 +12,11 @@ class Note {
     let newP = document.createElement("p"); // p added
     newP.innerHTML = title; 
 
-    let newA = document.createElement("a");
+    let newA = document.createElement('a');
     newA.setAttribute("class", "card-remove");
     newA.innerHTML = "Remove";
 
+    newNote.appendChild(newA); // added a element to div
     newNote.appendChild(newP);  // p placed in dev
 
     // HINT🤩 a.addEventListener('click', this.remove.bind(newNote));

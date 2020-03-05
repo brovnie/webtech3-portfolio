@@ -20,8 +20,9 @@ class Note {
     
     newNote.appendChild(newP);  // p placed in dev
     newNote.appendChild(newA); // added a element to div
-    // HINT🤩 a.addEventListener('click', this.remove.bind(newNote));
-    newA.addEventListener('click', console.log("it works")/*this.remove.bind(newNote)*/);
+    // HINT🤩 
+    newA.addEventListener('click', this.remove.bind(newNote));
+    
 
     return newNote;
   }
@@ -42,7 +43,7 @@ class Note {
   remove(){
     // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
     // in this function, 'this' will refer to the current note element
-    document.querySelector(".notes").removeChild(this.element);
+    console.log("remove executed");
   } 
 }
 

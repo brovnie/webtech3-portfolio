@@ -12,7 +12,7 @@ class Note {
     let newP = document.createElement("p"); // p added
     newP.innerHTML = title; 
 
-    let newA = document.createElement('a');
+    let newA = document.createElement('a'); // created a element
     newA.setAttribute("class", "card-remove");
     newA.setAttribute("href", "#");
     newA.innerHTML = "Remove";
@@ -21,8 +21,8 @@ class Note {
     newNote.appendChild(newP);  // p placed in dev
     newNote.appendChild(newA); // added a element to div
     // HINT🤩 
-    newA.addEventListener('click', this.remove.bind(newNote));
-    
+    newA.addEventListener("click", this.remove.bind(newNote));
+
 
     return newNote;
   }
@@ -43,8 +43,11 @@ class Note {
   remove(){
     // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
     // in this function, 'this' will refer to the current note element
-    console.log("remove executed");
-    document.querySelector(".notes").remove(this.element);
+
+    
+    console.log(this); // checking this
+    console.log(this.parentNode); // checking this.parentNod
+    this.remove(this.parentNode);
   } 
 }
 

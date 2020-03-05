@@ -39,8 +39,9 @@ class Note {
     // if you want to store arrays, look at JSON.parse and JSON.stringify
     //document.querySelector(".notes").removeChild(this.element);
     //JSON.stringify creates json file
-    let object = this;
-    console.log(this.title);
+    
+    let objectArr = [].push(this.title);
+    console.log(objectArr);
   }
   
   remove(){

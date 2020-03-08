@@ -88,7 +88,7 @@ class App {
     });*/
     
     for(let i = 0; i < savedNotes.length; i++){
-      let note = new Note(i);
+      let note = new Note(savedNotes[i]);
       note.add();
     }
   

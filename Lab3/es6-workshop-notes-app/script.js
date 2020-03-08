@@ -86,7 +86,7 @@ class App {
 
     let savedNotes =JSON.parse(localStorage.getItem(`data`));
     console.log(savedNotes);
- 
+    if(savedNotes){}
     savedNotes.forEach(element => {
       let note = new Note(element);
       note.add();

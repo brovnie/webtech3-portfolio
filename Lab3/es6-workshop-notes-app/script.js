@@ -41,7 +41,7 @@ class Note {
     
     // get everything named 'data' from your local storage browser 
     let items = localStorage.getItem(`data`);
-    //JSON.parse 
+    //JSON.parse => data becomes js object
     let data = JSON.parse(items);
     console.log(data);
     if( data == null ){
@@ -92,12 +92,13 @@ class App {
     let note = new Note(text); // created note
     note.add(); 
     note.saveToStorage();
-    // this.reset();
+    this.reset();
   }
   
   reset(){
     // this function should reset the form
-
+    document.querySelector("#txtAddNote").value="";
+    console.log(document.querySelector("#txtAddNote").value);
   }
   
 }

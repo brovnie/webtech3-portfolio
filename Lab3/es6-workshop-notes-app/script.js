@@ -1,3 +1,7 @@
+// adding cat-me module
+let kitty = require("cat-me");
+console.log(kitty());
+
 class Note {
   constructor(title) {
     this.title = title;

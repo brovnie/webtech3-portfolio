@@ -79,11 +79,18 @@ class App {
     // HINT🤩
     // load all notes from storage here and add them to the screen
     // something like note.add() in a loop would be nice
+
     let savedNotes = localStorage.getItem(`data`);
     console.log(savedNotes);
-    savedNotes.forEach(element => {
+   /* savedNotes.forEach(element => {
       note.add(element);
-    });
+      console.log(element);
+    });*/
+    let note = new Note();
+    for(let i = 0; i < savedNotes.length; i++){
+      
+      note.add();
+    }
   
   }
    

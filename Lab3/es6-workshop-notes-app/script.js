@@ -86,9 +86,9 @@ class App {
       note.add(element);
       console.log(element);
     });*/
-    let note = new Note();
+    
     for(let i = 0; i < savedNotes.length; i++){
-      
+      let note = new Note(i);
       note.add();
     }
   

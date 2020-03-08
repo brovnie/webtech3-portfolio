@@ -81,6 +81,10 @@ class App {
     // something like note.add() in a loop would be nice
     let savedNotes = localStorage.getItem(`data`);
     console.log(savedNotes);
+    savedNotes.forEach(element => {
+      note.add(element);
+    });
+  
   }
    
   createNote(e){

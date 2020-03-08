@@ -38,11 +38,22 @@ class Note {
     // localStorage only supports strings, not arrays
     // if you want to store arrays, look at JSON.parse and JSON.stringify
     //document.querySelector(".notes").removeChild(this.element);
-    //JSON.stringify creates json file
-    let data = localStorage.getItem(this.title);
+    
+    // get everything named 'data' from your local storage browser 
+    let items = localStorage.getItem(`data`);
+    //JSON.parse 
+    let data = JSON.parse(items);
     console.log(data);
-    let check = JSON.stringify(data);
-    console.log(check);        
+    if( data == null ){
+      data = [];
+      console.log(data);
+    }
+    // add to array
+    data.push(this.title);
+    console.log(data);
+    // change to string
+    localStorage.setItem('data', JSON.stringify(data));
+
   }
   
   remove(){
@@ -68,6 +79,8 @@ class App {
     // HINT🤩
     // load all notes from storage here and add them to the screen
     // something like note.add() in a loop would be nice
+    let savedNotes = localStorage.getItem(`data`);
+    console.log(savedNotes);
   }
    
   createNote(e){

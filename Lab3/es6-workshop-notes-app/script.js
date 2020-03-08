@@ -39,10 +39,10 @@ class Note {
     // if you want to store arrays, look at JSON.parse and JSON.stringify
     //document.querySelector(".notes").removeChild(this.element);
     //JSON.stringify creates json file
-    
-    console.log(JSON.stringify([].push(this.title)));
-          
-        
+    let data = localStorage.getItem(this.title);
+    console.log(data);
+    let check = JSON.stringify(data);
+    console.log(check);        
   }
   
   remove(){

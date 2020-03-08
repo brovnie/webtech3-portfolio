@@ -72,7 +72,7 @@ class App {
     // pressing the enter key should also work
     this.btnAdd = document.querySelector("#btnAddNote");
     this.btnAdd.addEventListener("click", this.createNote.bind(this));
-    // this.loadNotesFromStorage();
+    this.loadNotesFromStorage();
   }
   
   loadNotesFromStorage() {
@@ -98,7 +98,6 @@ class App {
   reset(){
     // this function should reset the form
     document.querySelector("#txtAddNote").value="";
-    console.log(document.querySelector("#txtAddNote").value);
   }
   
 }

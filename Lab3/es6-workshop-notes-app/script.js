@@ -1,6 +1,6 @@
 // adding cat-me module
-let kitty = require("cat-me");
-console.log(kitty());
+//let kitty = require("cat-me");
+//console.log(kitty());
 
 class Note {
   constructor(title) {
@@ -76,7 +76,18 @@ class App {
     // pressing the enter key should also work
     this.btnAdd = document.querySelector("#btnAddNote");
     this.btnAdd.addEventListener("click", this.createNote.bind(this));
+    let txtAdd = document.querySelector('#txtAddNote');
+    txtAdd.addEventListener("keypress", function(e){
+      console.log(e.keyCode);
+      if(e.keyCode === 13){
+        e.preventDefault();
+        console.log("it works");
+        this.createNote.bind(this);
+      }
+    } );
+    
     this.loadNotesFromStorage();
+
   }
   
   loadNotesFromStorage() {
@@ -84,7 +95,7 @@ class App {
     // load all notes from storage here and add them to the screen
     // something like note.add() in a loop would be nice
 
-    let savedNotes =JSON.parse(localStorage.getItem(`data`));
+    let savedNotes = JSON.parse(localStorage.getItem(`data`));
     console.log(savedNotes);
     if(savedNotes){}
     savedNotes.forEach(element => {

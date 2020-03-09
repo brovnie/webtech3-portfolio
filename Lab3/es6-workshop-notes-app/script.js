@@ -27,7 +27,6 @@ class Note {
     // HINT🤩 
     newA.addEventListener("click", this.remove.bind(newNote));
 
-
     return newNote;
   }
   
@@ -43,8 +42,7 @@ class Note {
     // if you want to store arrays, look at JSON.parse and JSON.stringify
     //document.querySelector(".notes").removeChild(this.element);
     
-    // get everything named 'data' from your local storage browser 
-    let items = localStorage.getItem(`data`);
+    let items = localStorage.getItem("data");
     //JSON.parse => data becomes js object
     let data = JSON.parse(items);
     console.log(data);
@@ -56,7 +54,7 @@ class Note {
     data.push(this.title);
     console.log(data);
     // change to string
-    localStorage.setItem('data', JSON.stringify(data));
+    localStorage.setItem("data", JSON.stringify(data));
 
   }
   
@@ -64,6 +62,21 @@ class Note {
     // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
     // in this function, 'this' will refer to the current note element
     this.remove(this.parentNode);
+    let text = this.querySelector('p').innerHTML;
+    console.log(text);
+     let items = localStorage.getItem(`data`);
+  
+    let newItem = JSON.parse("[" + items + "]");
+    
+    for(let i =0; i < newItem[0].length; i++){
+      if(newItem[0][i] == text){
+        console.log(newItem[0][i]);
+        newItem[0].splice(i,1);
+        
+      }
+      localStorage['data'] = JSON.stringify(newItem[0]);
+    }
+    console.log(newItem[0]);
   } 
 }
 

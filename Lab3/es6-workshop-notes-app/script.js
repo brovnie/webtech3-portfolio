@@ -45,14 +45,14 @@ class Note {
     let items = localStorage.getItem("data");
     //JSON.parse => data becomes js object
     let data = JSON.parse(items);
-    console.log(data);
+    //console.log(data);
     if( data == null ){
       data = [];
-      console.log(data);
+      //console.log(data);
     }
     // add to array
     data.push(this.title);
-    console.log(data);
+    //console.log(data);
     // change to string
     localStorage.setItem("data", JSON.stringify(data));
 

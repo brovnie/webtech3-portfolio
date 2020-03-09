@@ -41,7 +41,7 @@ class Note {
     // HINT🤩
     // localStorage only supports strings, not arrays
     // if you want to store arrays, look at JSON.parse and JSON.stringify
-    //document.querySelector(".notes").removeChild(this.element);
+    //
     
     // get everything named 'data' from your local storage browser 
     let items = localStorage.getItem(`data`);
@@ -57,14 +57,28 @@ class Note {
     console.log(data);
     // change to string
     localStorage.setItem('data', JSON.stringify(data));
-
+    document.querySelector(".notes").removeChild(this.element);
   }
   
   remove(){
     // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
     // in this function, 'this' will refer to the current note element
     this.remove(this.parentNode);
-  } 
+    // remove from storage
+    // get text from div
+    let text = this.querySelector('p').innerHTML;
+    console.log(text);
+    // get data from storage
+    let items = localStorage.getItem(`data`);
+    console.log(items);
+    let newItem = JSON.parse("[" + items + "]");
+    console.log(newItem[0]);
+    for(let i =0; i < newItem[0].length; i++){
+      console.log(newItem[0][i]);
+    }
+    
+    }
+
 }
 
 class App {

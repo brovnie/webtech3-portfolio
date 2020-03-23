@@ -26,6 +26,8 @@ getWeather(){
          return response.json();
     }).then(data =>{
         console.log(data);
+        let icon = data.currently.icon;
+        console.log(icon);
         document.querySelector('#test').innerHTML = data.currently.summary;
         document.querySelector('#test2').innerHTML = data.currently.temperature;
     }).catch(err => {

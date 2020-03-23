@@ -27,7 +27,7 @@ getWeather(){
     }).then(data =>{
         console.log(data);
         document.querySelector('#test').innerHTML = data.currently.summary;
-        //document.querySelector('#test2').innerHTML = data.currently.temperature;
+        document.querySelector('#test2').innerHTML = data.currently.temperature;
     }).catch(err => {
         console.log(err);
     });

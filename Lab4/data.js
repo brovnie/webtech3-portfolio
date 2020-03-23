@@ -15,4 +15,4 @@ let pokelist= {
         "tornado" : "dragonite"
 };
 
-export {pokelist};
+//export {pokelist};

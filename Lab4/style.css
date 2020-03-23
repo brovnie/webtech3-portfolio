@@ -13,6 +13,7 @@ body{
 }
 .pokedex{
     background-color: #DC0A2D;
+    border: 1px solid rgb(148, 8, 31);
     margin: 0 auto;
     width: 250px;
     height: 350px;
@@ -64,6 +65,7 @@ img{
     border-radius: 15px;
     margin-left: 17px;
     border: 1px solid black;
+
 }
 .poke-screen{
     padding-top: 15px;
@@ -73,6 +75,7 @@ img{
     margin-left: 25px;
     margin-top: 10px;
     border-radius: 15px;
+    border: 1px solid rgb(90, 90, 90);
 }
 .button{
     width: 20px;
@@ -80,5 +83,56 @@ img{
     border-radius: 50%;
     background-color: #a0001b;
     margin-left: 30px;
+    margin-right: 60px;
+    display: inline-block;
+}
+.sound{
+    
+    padding-top: 8px;
+    height: 20px;
+    width: 25px;
+    display: inline-block;
+}
+.stripe{
+    height: 2px;
+    background-color: black;
+    margin-bottom: 3px;
+}
+.poke-bottom{
+    display: flex;
+    margin-top: 20px;
+}
+.poke-text-field{
+    background-color: #66E33C;
+    width: 130px;
+    height: 70px;
+    border-radius: 5px;
+    border: 1px solid rgb(58, 129, 34);
+    display: inline-block;
+    margin-left: 25px;
+   
+}
+.poke-text-field #pokeTest{
+    font-family: Quantico, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    width: 100px;
+    margin:  4px 2px;
+    text-align: center;
+    
+}
+.controllers{
+    display: inline-block;
+    margin-left: 10px;
     margin-top: 5px;
+}
+.up, .down{
+    background-color: rgb(27, 27, 27);
+    width: 60px;
+    height: 20px;
+}
+.up{
+    transform: rotate(90deg);
+    position: relative;
+    top: 20px;
 }

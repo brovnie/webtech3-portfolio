@@ -1,6 +1,5 @@
-import Weather from './weather';
+import {icon} from './weather';
 
-let weather = new Weather();
 class Pokemon {
     constructor(){
         this.pokemonName;
@@ -24,5 +23,6 @@ class Pokemon {
 
     }
 }
-console.log(weather.getIcon());
+
 let pok = new Pokemon();
+console.log(icon);

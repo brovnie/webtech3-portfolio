@@ -4,9 +4,6 @@ constructor(){
     this.lat;
     this.lng;
     this.icon;
-    this.getIcon = () => {
-        return this.icon;
-    };
 } // end constructor
 getLocation(){
     navigator.geolocation.getCurrentPosition(
@@ -29,7 +26,7 @@ getWeather(){
         //get json 
          return response.json();
     }).then(data =>{
-        this.icon = data.currently.icon;
+        console.log('it\'s ' + data.currently.icon);
         document.querySelector('#test').innerHTML = data.currently.summary;
         document.querySelector('#test2').innerHTML = data.currently.temperature;
     }).catch(err => {
@@ -42,4 +39,4 @@ errorLocation(err){
 }
 } // end class Weather
 
-//let weather = new Weather();
+let weather = new Weather();

@@ -30,10 +30,11 @@ class Weather {
       document.querySelector('#test').innerHTML = data.currently.summary;
       document.querySelector('#test2').innerHTML = data.currently.temperature + "deg";
       //get pokemon
-      let pokemonName="";
+      let pokemonName = "";
       switch (data.currently.icon) {
         case 'clear-day':
-          pokemonName = "pikatchu";
+          //pikacthu = 25
+          pokemonName = "pikachu";
           break;
         case "clear-night":
           pokemonName = "zubat";
@@ -68,13 +69,21 @@ class Weather {
         case "thunderstorm":
           pokemonName = "raichu";
           break;
-          case "tornado":
-            pokemonName = "dragonite";
+        case "tornado":
+          pokemonName = "dragonite";
           break;
       }
       console.log(pokemonName);
+      return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
       //this.icon = 'something that was returned in then';
-    }).catch(err => {
+    }).then(response => {
+      //get json 
+      return response.json();
+    }).then(data => {
+      console.log(data);
+      document.querySelector('#pokeTest').innerHTML = data.species.name;
+      document.querySelector('#pokemon').setAttribute("src", data.sprites.front_default);
+  }).catch(err => {
       console.log(err);
       //this.icon = 'something that was returned in catch';
       //return Promise.resolve(this.icon);

@@ -1,7 +1,7 @@
 //import {icon} from './classes/weather';
 let watWeathet = document.querySelector('#pokeTest')
 
-console.log("lets " + watWeathet.getAttribute("value"));
+
 
 
 let pokelist= {

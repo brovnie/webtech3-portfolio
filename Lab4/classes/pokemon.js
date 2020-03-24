@@ -1,6 +1,6 @@
 class Pokemon {
-    constructor(){
-        this.pokemonName = "pokeName";
+    constructor(pokemon){
+        this.pokemonName = pokemon;
         this.pokemonPicture;
         this.catchPokemon();
     }
@@ -18,5 +18,5 @@ class Pokemon {
 
     }
 }
-
-let pok = new Pokemon();
+let todaysPokemon;
+    let pok = new Pokemon(toadysPokemon);

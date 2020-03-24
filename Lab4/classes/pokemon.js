@@ -1,4 +1,4 @@
-class Pokemon {
+/*class Pokemon {
     constructor(pokemon){
         this.pokemonName = pokemon;
         this.pokemonPicture;
@@ -19,4 +19,4 @@ class Pokemon {
     }
 }
 let todaysPokemon;
-    let pok = new Pokemon(toadysPokemon);
+    let pok = new Pokemon(toadysPokemon);*/

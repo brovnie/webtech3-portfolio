@@ -1,8 +1,4 @@
 //import {icon} from './classes/weather';
-let watWeathet = document.querySelector('#pokeTest')
-
-
-
 
 let pokelist= {
     "clear-day" : "pikatchu",

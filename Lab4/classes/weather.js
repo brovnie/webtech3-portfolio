@@ -41,13 +41,13 @@ class Weather {
           pokemonName = "zubat";
           weatherText = "clear night ";
           backgroundImg = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fak0.picdn.net%2Fshutterstock%2Fvideos%2F1864750%2Fthumb%2F1.jpg&f=1&nofb=1";
-          fontColor = "white";
+  
           break;
         case "rain":
           pokemonName = "wartortle";
           weatherText = "raining";
           backgroundImg = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FrBsqqu9tqIA%2Fmaxresdefault.jpg&f=1&nofb=1";
-          fontColor = "white";
+       
           break;
         case "snow":
           pokemonName = "lapras";
@@ -100,9 +100,10 @@ class Weather {
           backgroundImg = "https://images.unsplash.com/photo-1454789476662-53eb23ba5907?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=689&q=80";
           break;
       }
-      
+      let temp = data.currently.temperature + '';
+      let convertedTemp = (temp).split(".");
       document.querySelector('#weatherText').innerHTML = "It's " + weatherText + " outside";
-      document.querySelector('#degrees').innerHTML = data.currently.temperature + "&deg";
+      document.querySelector('#degrees').innerHTML = convertedTemp[0] + "&deg";
       document.querySelector('.container').style.backgroundImage = `url(${backgroundImg})`;
       //console.log(pokemonName);
       return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);

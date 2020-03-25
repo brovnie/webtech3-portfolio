@@ -14,10 +14,25 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    border: 2px solid black;
+    padding: 3px 5px;
+    font-size: 1.4em;
+    margin-left: 12px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 0.1em;
+    background-color: white;
+    color: black;
+    font-family: Quantico, Arial, Helvetica, sans-serif;
+}
 .pokedex{
     background-color: #DC0A2D;
     border: 1px solid rgb(148, 8, 31);
-    margin: 50px auto;
+    margin: 20px auto;
     width: 250px;
     height: 350px;
     border-radius: 5px;
@@ -150,7 +165,9 @@ img{
 #weatherText{
     grid-column: 1/3;
     grid-row: 1/1;
-    
+    font-size: 1.2em;
+    padding-top: 5px;
+    align-self: center;
 }
 #degrees {
     font-family: Quantico, Arial, Helvetica, sans-serif;
@@ -158,7 +175,7 @@ img{
     grid-row: 1/span 2;
     font-size: 2.5em;
 }
-.text-wrapper{
+.footer{
     height: 66px;
     position: relative;
     bottom: -15px;
@@ -168,7 +185,7 @@ img{
     margin: 10px 85px 0 85px;
     display: inline-block;
 }
-.footer{
+.footer p{
     text-align: center;
     font-size: 0.7em;
     padding-bottom: 5px; 

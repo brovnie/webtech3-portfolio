@@ -35,7 +35,7 @@ class Weather {
         case 'clear-day':
           //pikacthu = 25
           pokemonName = "pikachu";
-          weatherText = "cear sky";
+          weatherText = "clear sky";
           break;
         case "clear-night":
           pokemonName = "zubat";
@@ -87,8 +87,8 @@ class Weather {
           break;
       }
 
-      document.querySelector('#test').innerHTML = "It's " + weatherText + " outside";
-      document.querySelector('#test2').innerHTML = data.currently.temperature + "deg";
+      document.querySelector('#weatherText').innerHTML = "It's " + weatherText + " outside";
+      document.querySelector('#degrees').innerHTML = data.currently.temperature + "&deg";
       console.log(pokemonName);
       return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
       //this.icon = 'something that was returned in then';
@@ -101,7 +101,7 @@ class Weather {
       document.querySelector('#pokemon').setAttribute("src", data.sprites.front_default);
   }).catch(err => {
       console.log(err);
-      
+
     });
   };
 

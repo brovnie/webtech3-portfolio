@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding: 0;
+    font-family:  'Open Sans', Arial, Helvetica, sans-serif;
 }
 body{
     background-color: lightblue;
@@ -134,4 +135,7 @@ img{
     transform: rotate(90deg);
     position: relative;
     top: 20px;
+}
+#degrees {
+    font-family: Quantico, Arial, Helvetica, sans-serif;
 }

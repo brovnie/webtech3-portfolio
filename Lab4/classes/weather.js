@@ -18,16 +18,17 @@ class Weather {
     //console.log(this.lat);
     this.getWeather();
   }
+ 
   getWeather() {
-
-    let url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/15684c4ffc14f32fcd28af8aa81bc818/${this.lat},${this.lng}?units=si`
-    console.log(this.lat);
-    console.log(this.lng);
+ 
+    let url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/15684c4ffc14f32fcd28af8aa81bc818/${this.lat},${this.lng}?units=si`;
+    //console.log(this.lat);
+    //console.log(this.lng);
     return fetch(url).then(response => {
       //get json 
       return response.json();
     }).then(data => {
-      let weatherText;
+      let weatherText = "";
 
       //get pokemon
       let pokemonName = "";
@@ -89,14 +90,14 @@ class Weather {
 
       document.querySelector('#weatherText').innerHTML = "It's " + weatherText + " outside";
       document.querySelector('#degrees').innerHTML = data.currently.temperature + "&deg";
-      console.log(pokemonName);
+      //console.log(pokemonName);
       return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
       //this.icon = 'something that was returned in then';
     }).then(response => {
       //get json 
       return response.json();
     }).then(data => {
-      console.log(data);
+      //console.log(data);
       document.querySelector('#pokeTest').innerHTML = data.species.name;
       document.querySelector('#pokemon').setAttribute("src", data.sprites.front_default);
   }).catch(err => {
@@ -105,16 +106,12 @@ class Weather {
     });
   };
 
-  getCityName( lat, long){
-    geocoder = new google.maps.Geocoder();
-
-  }
-
   errorLocation(err) {
     console.log(err);
     return Promise.resolve(this.icon);
   }
 
 } // end class Weather
+
 
 let weather = new Weather();

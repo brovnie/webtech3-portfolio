@@ -102,7 +102,7 @@ class Weather {
       }
       let temp = data.currently.temperature + '';
       let convertedTemp = (temp).split(".");
-      document.querySelector('#weatherText').innerHTML = "It's " + weatherText + " outside";
+      document.querySelector('#weatherText').innerHTML = "It's " + weatherText;
       document.querySelector('#degrees').innerHTML = convertedTemp[0] + "&deg";
       document.querySelector('.container').style.backgroundImage = `url(${backgroundImg})`;
       //console.log(pokemonName);

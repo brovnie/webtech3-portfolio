@@ -80,7 +80,7 @@ class Weather {
           backgroundImg = "https://images.unsplash.com/photo-1520985244272-9d0b8067a4ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80";
           break;
         case "partly-cloudy-night":
-          pokemonName = "hunter";
+          pokemonName = "haunter";
           weatherText = "party cloudy night";
           backgroundImg = "https://images.unsplash.com/photo-1479156661942-92cd989cdb56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80";
           break;
